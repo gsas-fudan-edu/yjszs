@@ -95,6 +95,18 @@
     </div>
     <script type="text/javascript">
     $("#loginIt").click(function(){
+            if(Trim($("#password").val())==''){
+                $("#errorInfo").html('证件号码不能为空');
+                $("#errorInfo").css('display','');
+                $("#password").focus();
+                return;
+            }
+            if(Trim($("#validateCode").val())==''){
+                $("#errorInfo").html('验证码不能为空');
+                $("#errorInfo").css('display','');
+                $("#validateCode").focus();
+                return;
+            }
 			if(Trim($("#username").val())==''){
 				$("#errorInfo").html('准考证号不能为空');
 				$("#errorInfo").css('display','');
@@ -111,12 +123,7 @@
                 setTimeout(function () {$("#errorInfo").html('查询成绩异常，请检查输入信息或验证码!')}, 1000);
                 $("#username").focus();
             };
-			if(Trim($("#password").val())==''){
-				$("#errorInfo").html('证件号码不能为空');
-				$("#errorInfo").css('display','');
-				$("#password").focus();
-				return;
-			}
+			
 		});
     
     
