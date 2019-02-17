@@ -1,0 +1,22 @@
+$(function(){
+	
+	$(".menu-item",".wp-menu").each(function(){
+		$(this).mouseenter(function() {
+			$(".menu-link",this).addClass("parent");
+			$(this).find('.sub-menu').addClass('flipInY');
+		});
+		$(this).mouseleave(function(){
+			$(".menu-link",this).removeClass("parent");
+			 $(this).find('.sub-menu').removeClass('flipInY');
+		});
+	});
+	
+	$(".botlinks .links-wrap").each(function(index, el) {
+		$(el).hover(function() {
+			$(this).addClass('wrap-open').children('.link-items').stop(true,true).slideDown(300);
+				}, function() {
+			$(this).removeClass('wrap-open').children('.link-items').stop(true,true).slideUp(300);
+		});
+	});
+	
+});

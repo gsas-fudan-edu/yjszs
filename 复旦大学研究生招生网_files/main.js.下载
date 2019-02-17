@@ -1,0 +1,15 @@
+$(function(){
+	
+	/*var h = $('.pro-box').outerHeight(true);
+	var tol = h;
+	$('.pro_tt').height(tol);*/
+	
+	$(".post-11 li").each(function(){
+		$(this).children("a").hover(function(){
+			$(this).parent().find(".news_con").stop(true,true).fadeIn();			
+		},function(){
+			$(this).parent().find(".news_con").stop(true,true).fadeOut();
+		});
+	});
+	
+});
