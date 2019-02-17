@@ -1,0 +1,7 @@
+$(function(){
+	if ($(".banner").html() == "") {
+		$(".banner").addClass("none");
+	}else {
+		$(".banners").addClass("none");
+	}
+});
